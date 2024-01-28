@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.test{
+  border: 1px solid red;
+}
+@layer components {
+  @layer {
+    .container {
+      @apply mx-auto com:max-w-[88%] res-menu:max-w-[95%] h-full;
+    }
+  }
+  .btn {
+    @apply text-white bg-g_color py-1.5 px-3 rounded-2xl text-sm flex items-center justify-center gap-1 font-[500];
+  }
+  .ability-card {
+    @apply flex justify-center items-center rounded-2xl overflow-hidden;
+  }
+  .small-ability-card{
+    @apply w-[31%] res-menu:w-[48%] mob:w-[80%] h-[200px];
+  }
+  .ability-card .inner {
+    @apply w-[97%] h-[98%] bg-black rounded-2xl overflow-hidden flex flex-col justify-center items-center gap-3;
+  }
+  .ability-card .inner h1 {
+    @apply text-4xl;
+  }
+  .title {
+    @apply text-5xl font-bold py-4 text-white res-menu:text-3xl;
+  }
+  .text {
+    @apply text-white text-lg;
+  }
+  .btn-service {
+    @apply w-40 py-2 rounded-full text-white border-2 border-gray-400 res-menu:py-1 mob:w-[30vw];
+  }
+  .card-service {
+    @apply rounded-lg border-2 border-gray-400 w-1/4 h-[400px] flex flex-col items-center justify-center text-center gap-3 res-menu:w-2/3 mob:w-full;
+  }
+  .card-service .icon-service {
+    @apply p-7 border-emerald-600 border rounded-full text-y_color text-4xl;
+  }
+  .card-exp {
+    @apply flex items-center w-full justify-around flex-wrap bg-[#282828] text-white rounded-lg py-4 mt-5 res-menu:justify-between res-menu:px-5 res-menu:py-2;
+  }
+  .btn-exp {
+    @apply flex items-center gap-3 text-lg res-menu:text-xs font-bold justify-end res-menu:w-[30%];
+  }
+  .card-price {
+    @apply w-1/3 bg-[#262626] text-white px-10 res-menu:w-full;
+  }
+  .card-price .top-price {
+    @apply flex flex-col items-center border-b pb-5 border-g_color;
+  }
+  .card-price .bottom-price .btn-price {
+    @apply px-6 py-3 text-g_color border border-g_color my-5;
+  }
+  .lets-talk .right-talk .card-talk {
+    @apply border border-gray-300 px-7 bg-[#212121] flex flex-col justify-center rounded-lg h-1/3 res-menu:pb-5;
+  }
+  .lets-talk .right-talk .card-talk .icon-talk {
+    @apply text-4xl p-4 text-y_color bg-slate-500 bg-opacity-30 rounded-full;
+  }
+}
+
+/* @media (max-width:990px){
+  .inner-big{
+    justify-content: flex-start !important;
+  }
+} */
